@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class frm_IncomeTaxCalc
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,25 +20,14 @@ Partial Class frm_IncomeTaxCalc
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.txt_IncomeAmt = New System.Windows.Forms.TextBox()
         Me.lbl_IncomeAmt = New System.Windows.Forms.Label()
         Me.btn_CalcTax = New System.Windows.Forms.Button()
         Me.lbl_TaxesDue = New System.Windows.Forms.Label()
         Me.txt_TaxTotal = New System.Windows.Forms.TextBox()
+        Me.msktxt_Income = New System.Windows.Forms.MaskedTextBox()
         Me.SuspendLayout()
-        '
-        'txt_IncomeAmt
-        '
-        Me.txt_IncomeAmt.AcceptsReturn = True
-        Me.txt_IncomeAmt.AcceptsTab = True
-        Me.txt_IncomeAmt.Location = New System.Drawing.Point(105, 9)
-        Me.txt_IncomeAmt.MaxLength = 15
-        Me.txt_IncomeAmt.Name = "txt_IncomeAmt"
-        Me.txt_IncomeAmt.Size = New System.Drawing.Size(111, 20)
-        Me.txt_IncomeAmt.TabIndex = 0
-        Me.txt_IncomeAmt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'lbl_IncomeAmt
         '
@@ -76,16 +65,29 @@ Partial Class frm_IncomeTaxCalc
         Me.txt_TaxTotal.TabIndex = 3
         Me.txt_TaxTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
+        'msktxt_Income
+        '
+        Me.msktxt_Income.BeepOnError = True
+        Me.msktxt_Income.HidePromptOnLeave = True
+        Me.msktxt_Income.Location = New System.Drawing.Point(105, 9)
+        Me.msktxt_Income.Mask = "0000000000"
+        Me.msktxt_Income.Name = "msktxt_Income"
+        Me.msktxt_Income.RejectInputOnFirstFailure = True
+        Me.msktxt_Income.Size = New System.Drawing.Size(111, 20)
+        Me.msktxt_Income.TabIndex = 6
+        Me.msktxt_Income.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.msktxt_Income.Visible = False
+        '
         'frm_IncomeTaxCalc
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(240, 119)
+        Me.ClientSize = New System.Drawing.Size(256, 119)
+        Me.Controls.Add(Me.msktxt_Income)
         Me.Controls.Add(Me.lbl_TaxesDue)
         Me.Controls.Add(Me.txt_TaxTotal)
         Me.Controls.Add(Me.btn_CalcTax)
         Me.Controls.Add(Me.lbl_IncomeAmt)
-        Me.Controls.Add(Me.txt_IncomeAmt)
         Me.Name = "frm_IncomeTaxCalc"
         Me.Text = "Income Tax"
         Me.ResumeLayout(False)
@@ -96,5 +98,5 @@ Partial Class frm_IncomeTaxCalc
     Friend WithEvents btn_CalcTax As Button
     Friend WithEvents lbl_TaxesDue As Label
     Friend WithEvents txt_TaxTotal As TextBox
-    Friend WithEvents txt_IncomeAmt As TextBox
+    Friend WithEvents msktxt_Income As MaskedTextBox
 End Class
